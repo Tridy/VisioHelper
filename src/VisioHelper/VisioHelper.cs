@@ -3,31 +3,6 @@ using System.Xml.Linq;
 
 namespace Helpers
 {
-    public static class XmlTools
-    {
-        private static IEnumerable<XElement> GetShapesXml(XDocument pageXML)
-        {
-            return GetXElementsByName(pageXML, "Shape");
-        }
-
-        private static IEnumerable<XElement> GetXElementsByName(XContainer packagePart, string elementType)
-        {
-            IEnumerable<XElement> elements =
-                from element in packagePart.Descendants()
-                where element.Name.LocalName == elementType
-                select element;
-
-            return elements ?? Array.Empty<XElement>();
-        }
-
-        private static XDocument GetXMLFromPart(PackagePart packagePart)
-        {
-            Stream partStream = packagePart.GetStream();
-            XDocument partXml = XDocument.Load(partStream);
-            return partXml ?? throw new ArgumentException("Could not get xml part from package part."); ;
-        }
-    }
-
     public class VisioHelper
     {
         private IEnumerable<PackagePart>? _pages;
