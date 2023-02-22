@@ -3,7 +3,6 @@ using System.Xml.Linq;
 
 namespace Helpers
 {
-
     public static class XmlTools
     {
         private static IEnumerable<XElement> GetShapesXml(XDocument pageXML)
@@ -34,6 +33,7 @@ namespace Helpers
         private IEnumerable<PackagePart>? _pages;
         private IEnumerable<string>? _pagesNames;
         private Package? _visioPackage;
+
         public Dictionary<string, IEnumerable<string>> SearchForPrefixTextInVisioFile(string fileName, string prefixText)
         {
             Dictionary<string, IEnumerable<string>> result = new();
@@ -86,14 +86,13 @@ namespace Helpers
 
         private PackagePart GetPackagePart(string relationship)
         {
-          
             PackageRelationship? packageRel = _visioPackage!.GetRelationshipsByType(relationship).FirstOrDefault();
 
             PackagePart? part = null;
 
             if (packageRel != null)
             {
-                Uri sourceUri = new ("/", UriKind.Relative);
+                Uri sourceUri = new("/", UriKind.Relative);
                 Uri targetUri = packageRel.TargetUri;
                 part = GetPackagePart(sourceUri, targetUri);
             }
@@ -123,8 +122,6 @@ namespace Helpers
             var relatedPart = _visioPackage!.GetPart(partUri);
             return relatedPart;
         }
-
-
 
         private IEnumerable<PackagePart> GetPackageParts(PackagePart sourcePart, string relationship)
         {
