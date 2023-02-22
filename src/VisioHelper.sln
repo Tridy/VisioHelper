@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33103.201
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisioHelper", "VisioHelper\VisioHelper.csproj", "{A7B8CEB9-0FB2-431E-BFE6-6092616CBB94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisioHelper.Tests", "VisioHelper.Tests\VisioHelper.Tests.csproj", "{5AFF2072-C6F9-4FFB-B6BE-3E12D923297F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A7B8CEB9-0FB2-431E-BFE6-6092616CBB94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7B8CEB9-0FB2-431E-BFE6-6092616CBB94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7B8CEB9-0FB2-431E-BFE6-6092616CBB94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7B8CEB9-0FB2-431E-BFE6-6092616CBB94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AFF2072-C6F9-4FFB-B6BE-3E12D923297F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AFF2072-C6F9-4FFB-B6BE-3E12D923297F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AFF2072-C6F9-4FFB-B6BE-3E12D923297F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AFF2072-C6F9-4FFB-B6BE-3E12D923297F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C14493A5-142B-4CE2-8B94-9E0C18887AAA}
+	EndGlobalSection
+EndGlobal
